@@ -16,7 +16,7 @@ option1=st.selectbox(
 
 st.write('Preferred Method:',option1)
 
-cnx=st.connection('snowflake')
+cnx=st.connection("snowflake")
 session=cnx.session()
 
 my_dataframe=session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
